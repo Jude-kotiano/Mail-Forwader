@@ -20,7 +20,7 @@ class Sending:
         msg.attach(MIMEText(message_text, 'plain'))
 
         try:
-            server = smtplib.SMTP('mutabletech.co.ke', 587)
+            server = smtplib.SMTP('******', 587)
             server.starttls()
             server.login(self.sender_email, self.sender_password)
             server.sendmail(self.sender_email, receiver_email, msg.as_string())
@@ -42,7 +42,7 @@ class Sending:
         msg.attach(MIMEText(body, 'plain'))
 
         try:
-            server = smtplib.SMTP('mutabletech.co.ke', 587)  
+            server = smtplib.SMTP('******', 587)  
             server.starttls() 
             server.login(self.sender_email, self.sender_password)
             server.sendmail(self.sender_email, to_email, msg.as_string())
@@ -72,7 +72,7 @@ class Sending:
 
         
         try:
-            server = smtplib.SMTP('mutabletech.co.ke', 587)
+            server = smtplib.SMTP('******', 587)
             server.starttls() 
             server.login(self.sender_email, self.sender_password)
             server.sendmail(self.sender_email, to_email, msg.as_string())
@@ -81,7 +81,7 @@ class Sending:
         except Exception as e:
             print("An error occurred:", str(e))
         
-class Forwading():       
+class Forwading:       
    
     def email(ch, method, properties, body):
         message = json.loads(body)
