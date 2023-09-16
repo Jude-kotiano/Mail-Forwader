@@ -8,7 +8,7 @@ class Sending:
     
     def __init__(self,sender_email,sender_password):
          self.sender_email=sender_email
-         self.sender_passwords=sender_password   
+         self.sender_passwords=sender_password
          
 
     def send_message(self,receiver_email, subject, message_text):
